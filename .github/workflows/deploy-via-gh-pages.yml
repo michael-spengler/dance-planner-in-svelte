@@ -19,7 +19,7 @@ jobs:
 
       - name: Build
         run: |
-          cd dhbw-chatbot
+          cd client
           deno run --allow-run --allow-read https://deno.land/x/snel/install.ts
           trex run build 
 
@@ -28,4 +28,4 @@ jobs:
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: data-adapter/dist
+          FOLDER: dist
